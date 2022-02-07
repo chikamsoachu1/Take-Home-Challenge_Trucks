@@ -1,4 +1,8 @@
+/*
+This file holds the functions and neccessary data to run the api code
+It exports all the neccessary functions for data interaction in such a way to decouple api  logic and control logic/business logic
 
+*/
 const data= require('./csvjson.json');
 const geohash = require('ngeohash');
 
