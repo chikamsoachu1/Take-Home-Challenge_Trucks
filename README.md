@@ -97,6 +97,16 @@ http://localhost:5000/api/trucks/block/0266
   
   {"locationid":839523,"Applicant":"Halal Cart of San Francisco","FacilityType":"Push Cart","cnn":8741201,"LocationDescription":"MARKET ST: FREMONT ST \\ FRONT ST to 01ST ST \\ BUSH ST (400 - 498) -- NORTH --","Address":"1 FRONT ST","blocklot":"0266009","block":"0266","lot":"009","permit":"16MFF-0136","Status":"REQUESTED","FoodItems":"Gyro; Chicken over rice; Gyro over rice;","X":6013006.032,"Y":2116325.123,"Latitude":37.791757205944414,"Longitude":-122.39889763689186,"Schedule":"http://bsm.sfdpw.org/PermitsTracker/reports/report.aspx?title=schedule&report=rptSchedule&params=permit=16MFF-0136&ExportPDF=1&Filename=16MFF-0136_schedule.pdf","NOISent":"","Approved":"","Received":20160812,"PriorPermit":0,"ExpirationDate":"","Location":"(37.791757205944414, -122.39889763689186)"}]}
 
+## Get all truck locations  maxd distance from lattiude lat and longitude lon
+
+### Request
+  
+
+http://localhost:5000/api/trucks/locations?lat=37.7570155&lon=-122.3940629&maxd=.07
+
+### Response
+ Returns an array list of objects .07 miles to the location
+
 
 ## Create a new Location
 
@@ -165,5 +175,14 @@ http://localhost:5000/api/trucks/block/0266
      loadder.js--  Business logic and data behind the api '
      csvjson.json-- All the food truck data  is converted to json objects and strored here
      block.js --Logic for the block class
+  
+  ## HOW TO RUN
      
+     Clone git reposirtory to a folder 
+     
+      run npm install in directory that contains package.json
+     
+     run node index.js 
+     
+     Try out above commands in browser window
      
