@@ -14,50 +14,7 @@ var memory=require('./loadder.js');
 const {pulldata,getlocation_locid,updatelocation_locid,getblock_blockid,createlocation_locid,search}=memory;
 //
 pulldata();
-makeblocker=function(locid,hash,ind){
-    if (ind==8)
-        return
-    let cut=hash.slice(0,ind)
-    
-    if(Bstring[cut]==undefined){
-        
-        const block1 =new Block(cut)
-        blocks[cut]=block1
-        Bstring[cut]=0
 
-    }
-    
-        Bstring[cut]++
-        blocks[cut].addLoc(locid)
-        makeblocker(locid,hash,ind+1)   
-        
-    
-}
-create_ghash=function(locid,latt,long){
-    //insert locations and locid into mapping
-  
-  let hash=(geohash.encode(latt, long));
-
-  makeblocker(locid,hash,3)
-}
-for(let loc of data){
-    let locid=loc.locationid;
-    let blockid=loc.block;
-    let lat=loc.Latitude;
-    let lon=loc.Longitude;
-    map[loc.locationid]=loc;
-    
-    if(blockMap[blockid]==undefined){
-        let block_obj={ blockid:blockid,locations:[]};
-                       
-               
-        blockMap[blockid] =block_obj;
-    }
-    blockMap[blockid].locations.push(locid);
-    create_ghash(locid,lat,lon);
-
-}
-//console.log(blocks);
 
 
  
