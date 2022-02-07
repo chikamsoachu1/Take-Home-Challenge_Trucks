@@ -176,6 +176,10 @@ http://localhost:5000/api/trucks/locations?lat=37.7570155&lon=-122.3940629&maxd=
      csvjson.json-- All the food truck data  is converted to json objects and strored here
      block.js --Logic for the block class
   
+  ## MODULES AND PACAKAGES
+     The api is built primarily using the Express web framework
+     Geo hashing is done using the ngeohash 
+     both modules can be found on the npm site
   ## HOW TO RUN
      
      Clone git reposirtory to a folder 
